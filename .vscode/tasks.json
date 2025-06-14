@@ -1,0 +1,28 @@
+{
+  // ...existing code...
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    // ...existing code...
+    "react-responsive-carousel": "^3.2.23",
+    "emailjs-com": "^3.2.0"
+  },
+  "tasks": [
+    {
+      "label": "start",
+      "type": "shell",
+      "command": "npm",
+      "args": ["start"],
+      "group": "build",
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "group": "build",
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+.hackathon-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  background: rgba(255,255,255,0.13);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(190,106,223,0.13);
+  text-align: center;
+  position: relative;
+}
+
+.hackathon-carousel h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #be6adf;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.carousel-viewport {
+  width: 95vw;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: visible;
+  position: relative;
+}
+
+.carousel-slide-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+
+.carousel-slide-overlap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.slide-image {
+  width: 100%;
+  max-width: 350px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px #be6adf22;
+  border: 2.5px solid #be6adf33;
+  margin: 0 auto;
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.slide-image.overlap {
+  width: 700px;
+  max-width: 90vw;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px #be6adf33, 0 2px 16px #fff3;
+  border: 3px solid #be6adf44;
+  background: #fff;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s, filter 0.4s;
+  margin: 0 3vw;
+  z-index: 2;
+  filter: brightness(0.95) blur(1px);
+}
+
+.slide-image:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 32px #be6adf55;
+}
+
+.slide-image.side-by-side {
+  width: 340px;
+  max-width: 40vw;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px #be6adf22;
+  border: 2.5px solid #be6adf33;
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 0.5rem;
+}
+
+.slide-image.side-by-side:hover {
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 8px 32px #be6adf55;
+  z-index: 2;
+}
+
+.carousel .slide {
+  opacity: 0.5;
+  transform: scale(0.92) rotateY(-10deg);
+  transition: opacity 0.4s, transform 0.4s, filter 0.4s;
+  filter: blur(2px) grayscale(0.3);
+}
+
+.carousel .slide.selected {
+  opacity: 1;
+  transform: scale(1.12) rotateY(0deg);
+  z-index: 3;
+  filter: blur(0) grayscale(0);
+}
+
+.slide-image.overlap.selected {
+  filter: brightness(1.08) blur(0px) drop-shadow(0 0 24px #be6adf88);
+  box-shadow: 0 12px 48px #be6adf55, 0 4px 32px #fff5;
+}
+
+.carousel .slide.selected .slide-image.overlap {
+  filter: brightness(1.08) blur(0px) drop-shadow(0 0 24px #be6adf88);
+  box-shadow: 0 12px 48px #be6adf55, 0 4px 32px #fff5;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #be6adf;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 8px #be6adf22;
+  transition: background 0.2s, color 0.2s;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: #be6adf;
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  background: #be6adf;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #be6adf;
+}
+
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #be6adf;
+  box-shadow: 0 2px 8px #be6adf22;
+  transition: background 0.2s, color 0.2s;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.carousel .control-arrow:hover, .carousel.carousel-slider .control-arrow:hover {
+  background: #be6adf;
+  color: #fff;
+}
+
+.carousel .dot {
+  background: #be6adf;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.carousel .dot.selected, .carousel .dot:focus {
+  opacity: 1;
+  background: #be6adf;
+}
+
+@media (max-width: 900px) {
+  .hackathon-carousel {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+  .slide-image {
+    max-width: 98vw;
+    height: 180px;
+  }
+  .carousel-slide-row {
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+  .slide-image.side-by-side {
+    width: 140px;
+    height: 100px;
+  }
+  .carousel-viewport {
+    width: 99vw;
+    max-width: 99vw;
+  }
+  .slide-image.overlap {
+    width: 90vw;
+    height: 200px;
+    margin: 0 1vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .carousel-viewport {
+    width: 99vw;
+    max-width: 99vw;
+  }
+  .slide-image.overlap {
+    width: 90vw;
+    height: 200px;
+    margin: 0 1vw;
+  }
+}
