@@ -1,33 +1,68 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload, FaFolderOpen } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaFileDownload,
+  FaFolderOpen,
+} from 'react-icons/fa';
 import ProfilePhoto from './ProfilePhoto';
 import './Introduction.css';
 
-const Introduction = () => (
-  <section className="introduction" id="introduction">
-    <div className="intro-row">
-      <div className="intro-content intro-card-square enhanced-card">
-        <h1>
-          Hi, I'm  <span className="intro-highlight name-animate">Varna</span>
-        </h1>
-        <p className="tagline">Building digital experiences with passion and precision.</p>
-        <div className="profile-links pill-links">
-          <div className="pill-group">
-            <a href="https://github.com/alexdoe" target="_blank" rel="noopener noreferrer" title="GitHub"><FaGithub /> GitHub</a>
-            <a href="https://linkedin.com/in/alexdoe" target="_blank" rel="noopener noreferrer" title="LinkedIn"><FaLinkedin /> LinkedIn</a>
-            <a href="mailto:alexdoe@email.com" title="Email"><FaEnvelope /> Email</a>
-          </div>
-          <div className="pill-group">
-            <a href="/resume.pdf" download title="Download Resume"><FaFileDownload /> Resume</a>
-            <a href="#projects" title="View Projects"><FaFolderOpen /> Projects</a>
+const links = [
+  { icon: <FaGithub />, label: 'GitHub', href: 'https://github.com/alexdoe', group: 1 },
+  { icon: <FaLinkedin />, label: 'LinkedIn', href: 'https://linkedin.com/in/alexdoe', group: 1 },
+  { icon: <FaEnvelope />, label: 'Email', href: 'mailto:alexdoe@email.com', group: 1 },
+  { icon: <FaFileDownload />, label: 'Resume', href: '/resume.pdf', download: true, group: 2 },
+  { icon: <FaFolderOpen />, label: 'Projects', href: '#projects', group: 2 },
+];
+
+const Introduction = () => {
+  const groupedLinks = links.reduce((groups, link) => {
+    const group = groups[link.group] || [];
+    group.push(link);
+    groups[link.group] = group;
+    return groups;
+  }, {});
+
+  return (
+    <section className="introduction" id="introduction">
+      <div className="intro-row">
+        <div className="intro-content intro-card-square enhanced-card">
+          <h1>
+            Hi, I'm <span className="intro-highlight name-animate">Varna</span>
+          </h1>
+
+          <h2 className="intro-subtitle">UI/UX Designer | Problem Solver | SIH Finalist</h2>
+                   <p className="tagline">I build responsive, user-friendly web applications using modern technologies like React and the MERN stack. I focus on solving real-world problems with clean code, practical functionality, and intuitive UI/UX design.</p>
+          <div className="profile-links pill-links">
+            {[1, 2].map((groupNum) => (
+              <div className="pill-group" key={groupNum}>
+                {groupedLinks[groupNum]?.map(({ icon, label, href, download }, idx) => (
+                  <a
+                    key={idx}
+                    href={href}
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    title={label}
+                    aria-label={label}
+                    
+                    {...(download && { download })}
+                  >
+                    <span className="pill-icon">{icon}</span>
+                    {label}
+                  </a>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
+        <div className="intro-profile-square enhanced-profile">
+          <ProfilePhoto />
+        </div>
       </div>
-      <div className="intro-profile-square enhanced-profile">
-        <ProfilePhoto />
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Introduction;
