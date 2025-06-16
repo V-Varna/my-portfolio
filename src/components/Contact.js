@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { FaUser, FaEnvelope, FaCommentDots, FaPaperPlane } from 'react-icons/fa';
+import './Contact.css';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -25,10 +27,19 @@ const Contact = () => {
         <p>Thank you for reaching out! I'll get back to you soon.</p>
       ) : (
         <form onSubmit={handleSubmit} className="contact-form">
-          <input type="text" name="name" placeholder="Your Name" value={form.name} onChange={handleChange} required />
-          <input type="email" name="email" placeholder="Your Email" value={form.email} onChange={handleChange} required />
-          <textarea name="message" placeholder="Your Message" value={form.message} onChange={handleChange} required />
-          <button type="submit">Send Message</button>
+          <div style={{ position: 'relative' }}>
+            <FaUser className="input-icon" />
+            <input type="text" name="name" placeholder="Your Name" value={form.name} onChange={handleChange} required />
+          </div>
+          <div style={{ position: 'relative' }}>
+            <FaEnvelope className="input-icon" />
+            <input type="email" name="email" placeholder="Your Email" value={form.email} onChange={handleChange} required />
+          </div>
+          <div style={{ position: 'relative' }}>
+            <FaCommentDots className="input-icon" />
+            <textarea name="message" placeholder="Your Message" value={form.message} onChange={handleChange} required />
+          </div>
+          <button type="submit"><FaPaperPlane style={{ marginRight: '0.5rem' }} />Send Message</button>
           {error && <p className="error">{error}</p>}
         </form>
       )}

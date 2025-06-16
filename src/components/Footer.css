@@ -14,9 +14,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.9rem;
   font-size: 1.05rem;
   color: #be6adf;
+}
+
+.footer-content span {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.5px;
 }
 
 .footer-links {
@@ -35,4 +43,16 @@
 .footer-links a:hover {
   color: #be6adf;
   text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 0 0.7rem;
+    font-size: 1rem;
+  }
+  .footer-links {
+    gap: 1.1rem;
+  }
 }

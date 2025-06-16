@@ -1,0 +1,105 @@
+.contact-section {
+  max-width: 480px;
+  margin: 3.5rem auto 0 auto;
+  padding: 2.5rem 2rem 2.2rem 2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 60%, rgba(190,106,223,0.10) 100%);
+  border-radius: 2.2rem;
+  box-shadow: 0 8px 32px #be6adf33, 0 2px 16px #fff3;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #be6adf;
+  margin-bottom: 1.7rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px #be6adf22;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-items: stretch;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #be6adf;
+  font-size: 1.2rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9rem 1.1rem;
+  padding-left: 2.7rem;
+  border-radius: 1.1rem;
+  border: 1.5px solid #be6adf44;
+  background: rgba(255,255,255,0.13);
+  font-size: 1.08rem;
+  color: #3a2a4d;
+  box-shadow: 0 2px 8px #be6adf11;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 2px solid #be6adf;
+  box-shadow: 0 4px 16px #be6adf33;
+}
+
+.contact-form button {
+  padding: 0.9rem 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #be6adf 40%, #bfa7e6 100%);
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 2px 12px #be6adf33;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(90deg, #fff 0%, #be6adf 100%);
+  color: #be6adf;
+  box-shadow: 0 4px 24px #be6adf77, 0 0 0 2px #fff;
+  transform: translateY(-2px) scale(1.06);
+}
+
+.error {
+  color: #d32f2f;
+  margin-top: 0.7rem;
+  font-size: 1rem;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: -40px; left: -40px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, #be6adf55 0%, transparent 80%);
+  z-index: 0;
+  filter: blur(8px);
+}
+
+.contact-section::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, #bfa7e655 0%, transparent 80%);
+  z-index: 0;
+  filter: blur(8px);
+}
