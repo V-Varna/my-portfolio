@@ -2,77 +2,135 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 3rem auto;
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
-  background: rgba(255,255,255,0.13);
-  border-radius: 2rem;
-  box-shadow: 0 8px 32px rgba(190,106,223,0.13);
+  padding: 3.2rem 1.5rem 2.5rem 1.5rem;
+  background: #fff1; /* Remove shine, use subtle background */
+  border-radius: 2.5rem;
+  box-shadow: 0 12px 48px #be6adf13, 0 2px 16px #fff1;
   text-align: center;
+  position: relative;
+  overflow: visible;
 }
 
 .achievements-section h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
+  font-size: 2.4rem;
+  font-weight: 900;
   color: #be6adf;
-  margin-bottom: 2.2rem;
-  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 12px #be6adf22;
 }
 
 .achievements-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2.5rem;
   justify-content: center;
   align-items: stretch;
 }
 
 .achievement-card {
-  background: rgba(255,255,255,0.18);
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 24px #be6adf22;
-  border: 2px solid #be6adf33;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  min-width: 260px;
-  max-width: 340px;
-  flex: 1 1 260px;
+  background: linear-gradient(120deg, rgba(255,255,255,0.18) 60%, rgba(190,106,223,0.13) 100%);
+  border-radius: 2.2rem;
+  box-shadow: 0 12px 48px #be6adf33, 0 2px 16px #fff5;
+  border: 2.5px solid #c770f0;
+  padding: 2.5rem 2rem 1.7rem 2rem;
+  min-width: 290px;
+  max-width: 370px;
+  flex: 1 1 290px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
 .achievement-card:hover {
-  box-shadow: 0 8px 32px #be6adf55;
-  transform: translateY(-6px) scale(1.04);
+  background: radial-gradient(circle, #6a8efd55 0%, transparent 80%);
+  box-shadow: 0 20px 64px #be6adf55, 0 4px 32px #fff5;
+  transform: translateY(-8px) scale(1.07);
+  border: 2.5px solid #be6adf;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: -40px; left: -40px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, #6a8efd44 0%, transparent 80%);
+  z-index: 0;
+}
+
+.achievement-card::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, #6a8efd55 0%, transparent 80%);
+  z-index: 0;
 }
 
 .achievement-icon {
-  font-size: 2.8rem;
-  margin-bottom: 1.2rem;
+  font-size: 3.2rem;
+  margin-bottom: 1.3rem;
+  filter: drop-shadow(0 2px 12px #be6adf44);
+  z-index: 1;
+  
+  border-radius: 50%;
+  padding: 0.6rem 1.1rem;
+  box-shadow: 0 2px 12px #be6adf22;
+  border: 2.5px solid #be6adf33;
+}
+
+.achievement-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: rgba(255,255,255,0.10);
+  border-radius: 1.2rem;
+  padding: 1.1rem 1.2rem 0.7rem 1.2rem;
+  box-shadow: 0 2px 12px #be6adf11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .achievement-content h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.32rem;
+  font-weight: 800;
   color: #be6adf;
   margin-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px #be6adf22;
 }
 
 .achievement-content p {
-  font-size: 1rem;
-  color: #6a4c93;
+  font-size: 1.08rem;
+  color: #b623be;
   margin-bottom: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  text-align: center;
+  border-radius: 0.7rem;
+  padding: 0.5rem 0.8rem;
+  box-shadow: 0 2px 8px #be6adf11;
 }
 
 .achievement-year {
-  font-size: 0.95rem;
-  color: #bfa7e6;
-  font-weight: 600;
+  font-size: 1.05rem;
+  color: #be6adf;
+  font-weight: 700;
+  
+  border-radius: 0.6rem;
+  padding: 0.2rem 0.7rem;
+  margin-top: 0.2rem;
+  box-shadow: 0 1px 4px #be6adf22;
 }
 
 @media (max-width: 900px) {
   .achievements-cards {
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
   }
   .achievement-card {
     min-width: 0;

@@ -10,11 +10,11 @@ import ProfilePhoto from './ProfilePhoto';
 import './Introduction.css';
 
 const links = [
-  { icon: <FaGithub />, label: 'GitHub', href: 'https://github.com/alexdoe', group: 1 },
-  { icon: <FaLinkedin />, label: 'LinkedIn', href: 'https://linkedin.com/in/alexdoe', group: 1 },
-  { icon: <FaEnvelope />, label: 'Email', href: 'mailto:alexdoe@email.com', group: 1 },
-  { icon: <FaFileDownload />, label: 'Resume', href: '/resume.pdf', download: true, group: 2 },
-  { icon: <FaFolderOpen />, label: 'Projects', href: '#projects', group: 2 },
+  { icon: <FaGithub />, label: 'GitHub', href: 'https://github.com/V-Varna', group: 1 },
+  { icon: <FaLinkedin />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/varna-vanamala/', group: 1 },
+  { icon: <FaEnvelope />, label: 'Email', href: 'mailto:v2005varna@email.com', group: 1 },
+  { icon: <FaFileDownload />, label: 'Resume', href: 'https://drive.google.com/file/d/1iSL72OUc_IZ0P_eZaMa_4d9K6I1zKOeZ/view?usp=drive_link', download: true, group: 2 },
+  { icon: <FaFolderOpen />, label: 'Projects', href: 'https://github.com/V-Varna?tab=repositories', group: 2 },
 ];
 
 const Introduction = () => {

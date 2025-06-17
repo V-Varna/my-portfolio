@@ -3,20 +3,31 @@ import './Achievements.css';
 
 const achievements = [
   {
-    title: 'Smart India Hackathon Winner',
-    description: 'Secured 1st place in SIH 2023 for developing an innovative solution to a real-world problem.',
+    description: 'Hackathon 2024',
+    title: 'Smart India Hackathon Finalists',
+    description: 'Finalist in the national-level hackathon at NIT Surathkal, securing a Top 5 spot among 330+ teams under the Ministry of Youth Affairs and Sports. Advanced through three rigorous rounds, from internal selection to the Grand Finale, where an expert panel evaluated the solution.',
     icon: '🏆',
-    year: '2023',
+    year: '2024',
   },
   {
-    title: 'Best Project Award',
-    description: 'Received the Best Project Award at College Tech Fest for an AI-powered web app.',
+    description: 'DSA Practice 2024',
+    title: 'LeetCode 150+',
+    description: 'Solved over 150 coding problems on LeetCode, demonstrating strong problem-solving skills and consistency in data structures and algorithms.',
     icon: '🥇',
     year: '2024',
   },
   {
-    title: 'Certificate of Excellence',
-    description: 'Recognized for outstanding performance in the National Coding Challenge.',
+    description: 'Innovation 2023',
+    title: 'Runner-Up – Ideathon',
+    description: 'Secured Runner-Up at Pragnya Ideathon (GRIET) for proposing a tech-driven solution, judged for creativity, feasibility, and innovation.',
+    icon: '🎖️',
+    year: '2023',
+  },
+
+  {
+    description: 'Certification 2023',
+    title: 'NPTEL Elite Certificate',
+    description: 'Awarded Elite grade for “The Joy of Computing using Python” by NPTEL – showcasing a strong grasp of foundational programming concepts.',
     icon: '🎖️',
     year: '2023',
   },
