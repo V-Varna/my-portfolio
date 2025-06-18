@@ -58,13 +58,21 @@
 }
 
 .navbar-links {
-  margin-left: 2vw;
+  margin-left: 0.5vw;
   display: flex;
   gap: 2.2rem;
   list-style: none;
   align-items: center;
   font-size: 1.13rem;
   font-weight: 600;
+}
+
+.navbar-links li {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  min-width: 120px;
+  max-width: 160px;
 }
 
 .navbar-links li a {
@@ -81,6 +89,8 @@
   transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
   position: relative;
   z-index: 1;
+  width: 100%;
+  text-align: center;
 }
 
 .navbar-links li a:hover {
@@ -127,8 +137,33 @@
   display: flex;
   align-items: center;
   gap: 2.2rem;
-  margin-right: 0;
+  margin-right: 0.2vw;
   margin-left: 0;
+  min-width: 600px; /* Ensures navbar doesn't shrink when pills are hidden */
+  justify-content: flex-end;
+}
+
+.navbar-menu-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+  margin-left: 1.5rem;
+  margin-right: 0.2vw;
+  padding: 8px 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #be6adf44;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-menu-btn:hover {
+  background: #be6adf;
+  color: #fff;
+  box-shadow: 0 4px 16px #be6adf99;
 }
 
 @media (max-width: 900px) {
@@ -145,6 +180,7 @@
   .navbar-right {
     margin-right: 0;
     gap: 1.1rem;
+    min-width: 0;
   }
   .navbar-logo {
     font-size: 1.3rem;
@@ -155,5 +191,10 @@
     flex-direction: column;
     width: 100%;
     font-size: 1rem;
+  }
+  .navbar-menu-btn {
+    margin-left: 0.7rem;
+    margin-right: 0.5vw;
+    font-size: 2rem;
   }
 }
