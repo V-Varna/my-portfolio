@@ -86,7 +86,7 @@
 
 .contact-form button:hover {
   background: radial-gradient(circle, #6a8efd55 0%, transparent 80%);
-  color: #be6adf;
+  color: #0b0000;
   box-shadow: 0 4px 24px #be6adf77, 0 0 0 2px #fff;
   transform: translateY(-2px) scale(1.06);
 }

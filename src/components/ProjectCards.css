@@ -2,34 +2,36 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 3rem auto;
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  padding: 3.2rem 1.5rem 2.5rem 1.5rem;
   background: #fff1;
-  border-radius: 2rem;
-  box-shadow: 0 8px 32px rgba(190,106,223,0.13);
+  border-radius: 2.5rem;
+  box-shadow: 0 12px 48px #be6adf13, 0 2px 16px #fff1;
   text-align: center;
+  position: relative;
+  overflow: visible;
 }
 
 .projects-section h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
+  font-size: 2.4rem;
+  font-weight: 900;
   color: #be6adf;
-  margin-bottom: 2.2rem;
-  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 12px #be6adf22;
 }
 
 .project-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem 2.5rem;
+  gap: 2.5rem;
   justify-content: center;
   align-items: stretch;
-  margin-top: 1.5rem;
 }
 
 .project-card {
   background: linear-gradient(120deg, rgba(255,255,255,0.18) 60%, rgba(190,106,223,0.13) 100%);
   border-radius: 2.2rem;
-  box-shadow: 0 12px 48px #be6adf33, 0 2px 16px #fff3;
+  box-shadow: 0 12px 48px #be6adf33, 0 2px 16px #fff5;
   border: 2.5px solid #c770f0;
   padding: 2.5rem 2rem 1.7rem 2rem;
   min-width: 290px;
@@ -44,12 +46,19 @@
   margin-bottom: 0.5rem;
 }
 
+.project-card:hover {
+ background: radial-gradient(circle, #6a8efd55 0%, transparent 80%);
+  box-shadow: 0 20px 64px #be6adf55, 0 4px 32px #fff5;
+  transform: translateY(-8px) scale(1.07);
+  border: 2.5px solid #be6adf;
+}
+
 .project-card::before {
   content: '';
   position: absolute;
   top: -40px; left: -40px;
   width: 120px; height: 120px;
-  background: radial-gradient(circle, #be6adf55 0%, transparent 80%);
+  background: radial-gradient(circle, #6a8efd44 0%, transparent 80%);
   z-index: 0;
 }
 
@@ -62,13 +71,6 @@
   z-index: 0;
 }
 
-.project-card:hover {
-    background: radial-gradient(circle, #6a8efd55 0%, transparent 80%);
-  box-shadow: 0 20px 64px #be6adf55, 0 4px 32px #fff5;
-  transform: translateY(-8px) scale(1.07);
-  border: 2.5px solid #be6adf;
-}
-
 .project-card-header {
   display: flex;
   align-items: center;
@@ -79,7 +81,7 @@
 .project-card-icon {
   font-size: 2.2rem;
   color: #be6adf;
-    
+ 
   border-radius: 50%;
   box-shadow: 0 2px 12px #be6adf22;
   padding: 0.5rem;
@@ -101,7 +103,7 @@
   margin-bottom: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1px;
-    text-align: center;
+  text-align: center;
   border-radius: 0.7rem;
   padding: 0.5rem 0.8rem;
   box-shadow: 0 2px 8px #be6adf11;
@@ -116,13 +118,13 @@
 }
 
 .tech-badge {
- 
+  background: linear-gradient(90deg, #be6adf 40%, #bfa7e6 100%);
   color: #fff;
   font-weight: 700;
   border-radius: 0.7rem;
   padding: 0.3rem 0.9rem;
   font-size: 0.98rem;
-  box-shadow: 0 2px 8px #6a4c93;
+  box-shadow: 0 2px 8px #be6adf22;
   letter-spacing: 0.2px;
 }
 
