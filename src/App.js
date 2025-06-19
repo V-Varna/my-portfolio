@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Navbar from './components/Navbar';
 import Introduction from './components/Introduction';
 import './index.css';
@@ -37,6 +38,7 @@ function App() {
       <Achievements />
       <Contact />
       <Footer />
+      <SpeedInsights />
     </div>
   );
 }
