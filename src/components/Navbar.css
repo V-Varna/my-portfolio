@@ -166,6 +166,45 @@
   box-shadow: 0 4px 16px #be6adf99;
 }
 
+body.light-mode .navbar {
+  background: linear-gradient(90deg, #8a817c 0%, #bcb8b1 40%, #f4f3ee 80%, #e6ccb2 100%) !important;
+  border-bottom: 2px solid #8a817c !important;
+  box-shadow: 0 8px 32px 0 rgba(138,129,124,0.13), 0 1.5px 8px 0 #e6ccb244 !important;
+  border-radius: 0 0 18px 18px !important;
+  backdrop-filter: blur(10px) !important;
+}
+body.light-mode .navbar-logo {
+  background: linear-gradient(90deg, #220901 30%, #4b3d33 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: unset !important;
+  text-shadow: 0 2px 12px #8a817c44, 0 0 8px #bcb8b1cc !important;
+}
+body.light-mode .navbar-links li a {
+  background: linear-gradient(90deg, #bcb8b1 0%, #e6ccb2 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 12px #bcb8b144 !important;
+  border: none !important;
+}
+body.light-mode .navbar-links li a:hover {
+  background: linear-gradient(90deg, #e6ccb2 0%, #f4f3ee 100%) !important;
+  color: #8a817c !important;
+  box-shadow: 0 4px 24px #e6ccb277, 0 0 0 2px #f4f3ee !important;
+}
+body.light-mode .navbar-menu-btn,
+body.light-mode .mode-toggle {
+  color: #8a817c !important;
+  background: linear-gradient(90deg, #bcb8b1 0%, #f4f3ee 100%) !important;
+  box-shadow: 0 2px 8px #bcb8b144 !important;
+}
+body.light-mode .navbar-menu-btn:hover,
+body.light-mode .mode-toggle:hover {
+  background: #e6ccb2 !important;
+  color: #8a817c !important;
+  box-shadow: 0 4px 16px #e6ccb299 !important;
+}
+
 @media (max-width: 900px) {
   .navbar-inner {
     flex-direction: column;

@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body.light-mode * {
+  scrollbar-width: thin;
+  scrollbar-color: #bcb8b1 #f4f3ee;
+}
+
+body.light-mode ::-webkit-scrollbar {
+  width: 12px;
+  background: #f4f3ee;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #bcb8b1 0%, #e6ccb2 100%);
+  border-radius: 8px;
+  border: 2px solid #f4f3ee;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #8a817c 0%, #e6ccb2 100%);
+}
+
+body.light-mode ::-webkit-scrollbar-corner {
+  background: #f4f3ee;
+}

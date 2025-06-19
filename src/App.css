@@ -16,6 +16,11 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+body.light-mode {
+  background-image: linear-gradient(to left, #bcb8b1, #f4f3ee);
+  color: #8a817c;
+}
+
 .App {
   text-align: center;
   min-height: 100vh;
@@ -366,6 +371,138 @@ section:hover {
   .contact-section h2 {
     font-size: 1.3rem;
   }
+}
+
+body.light-mode .App {
+  background: linear-gradient(to bottom left, #f7f6fa 60%, #e6e2f1 100%);
+  color: #2d1950;
+}
+
+body.light-mode section {
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 4px 24px #be6adf22;
+  color: #2d1950;
+}
+
+body.light-mode .navbar {
+  background: linear-gradient(90deg, #fff 0%, #be6adf 100%);
+  border-bottom: 2px solid #be6adf;
+}
+
+body.light-mode .navbar-logo {
+  color: #be6adf;
+  background: none;
+  -webkit-text-fill-color: #be6adf;
+  text-shadow: 0 2px 12px #be6adf22;
+}
+
+body.light-mode .navbar-links li a {
+  background: linear-gradient(90deg, #fff 40%, #be6adf 100%);
+  color: #be6adf;
+  box-shadow: 0 2px 12px #be6adf22;
+}
+
+body.light-mode .navbar-links li a:hover {
+  background: linear-gradient(90deg, #be6adf 0%, #fff 100%);
+  color: #fff;
+}
+
+body.light-mode .skill-card {
+  background: #f3eaff;
+  color: #2d1950;
+  border: 1.5px solid #be6adf44;
+}
+
+body.light-mode .skill-card:hover {
+  background: #fff;
+  color: #be6adf;
+  border: 2px solid #be6adf;
+}
+
+body.light-mode .project-card {
+  background: #f3eaff;
+  color: #2d1950;
+  border: 1.5px solid #be6adf44;
+}
+
+body.light-mode .project-card:hover {
+  background: #fff;
+  color: #be6adf;
+  border: 2px solid #be6adf;
+}
+
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+  background: #fff;
+  color: #2d1950;
+  border: 1.5px solid #be6adf44;
+}
+
+body.light-mode .contact-form button {
+  background: #be6adf;
+  color: #fff;
+}
+
+body.light-mode .contact-form button:hover {
+  background: #c770f0;
+}
+
+body.light-mode {
+  color: #181818 !important;
+}
+
+body.light-mode .App,
+body.light-mode section,
+body.light-mode .skills-section,
+body.light-mode .skills-category-block,
+body.light-mode .skills-items-center,
+body.light-mode .skills-modal-card,
+body.light-mode .project-card,
+body.light-mode .skill-card,
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+  color: #353535 !important;
+  background: #FFFFFF !important;
+  border-color: #D9D9D9 !important;
+}
+
+body.light-mode .project-title,
+body.light-mode .skills-title-gradient,
+body.light-mode .skills-modal-title,
+body.light-mode .skills-category-heading,
+body.light-mode .skills-items-title {
+  color: #8a817c !important;
+  -webkit-text-fill-color: #8a817c !important;
+}
+
+body.light-mode .project-description,
+body.light-mode .project-tech,
+body.light-mode .tech-badge,
+body.light-mode .btn,
+body.light-mode .btn:hover,
+body.light-mode .profile-links a,
+body.light-mode .tagline {
+  color: #353535 !important;
+}
+
+body.light-mode .navbar-links li a,
+body.light-mode .navbar-links li a:hover {
+  color: #353535 !important;
+  background: linear-gradient(90deg, #D9D9D9 40%, #3C6E71 100%);
+}
+
+body.light-mode .glass-pill,
+body.light-mode .skill-category-pill,
+body.light-mode .glass-pill.active,
+body.light-mode .skill-category-pill.active {
+  color: #353535 !important;
+  background: #D9D9D9 !important;
+  border-color: #3C6E71 !important;
+}
+
+body.light-mode .skills-items-list-center span,
+body.light-mode .skills-items-list span {
+  color: #353535 !important;
 }
 
 ::-webkit-scrollbar {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Introduction from './components/Introduction';
-
+import './index.css';
 import HackathonCarousel from './components/HackathonCarousel';
 import AboutMe from './components/AboutMe';
 import TechnicalSkills from './components/TechnicalSkills';
@@ -12,12 +12,14 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('theme') === 'dark';
-  });
+  const [darkMode, setDarkMode] = useState(() => true); // Always start in dark mode
 
   useEffect(() => {
-    document.body.classList.toggle('dark-mode', darkMode);
+    if (darkMode) {
+      document.body.classList.remove('light-mode');
+    } else {
+      document.body.classList.add('light-mode');
+    }
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 

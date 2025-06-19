@@ -354,3 +354,69 @@
     grid-template-columns: 1fr;
   }
 }
+
+body.light-mode .skills-section,
+body.light-mode .skills-section.enhanced-glass.skills-card-beautified,
+body.light-mode .skills-category-block,
+body.light-mode .skills-items-center,
+body.light-mode .skills-modal-card {
+  background: #fffcf2 !important;
+  border-color: #8a817c !important;
+  box-shadow: 0 12px 48px #e6ccb2, 0 2px 16px #bcb8b1 !important;
+}
+body.light-mode .skills-section.enhanced-glass.skills-card-beautified::before {
+  background: radial-gradient(circle, #8a817c 0%, transparent 80%) !important;
+}
+body.light-mode .skills-section.enhanced-glass.skills-card-beautified::after {
+  background: radial-gradient(circle, #e6ccb2 0%, transparent 80%) !important;
+}
+body.light-mode .skills-title-gradient,
+body.light-mode .skills-modal-title,
+body.light-mode .skills-category-heading,
+body.light-mode .skills-items-title {
+  color: #8a817c !important;
+  -webkit-text-fill-color: #8a817c !important;
+  background: none !important;
+  text-shadow: none !important;
+}
+body.light-mode .skill-category-pill,
+body.light-mode .glass-pill {
+  background: linear-gradient(90deg, #bcb8b1 0%, #e6ccb2 100%) !important;
+  color: #220901 !important;
+  border-color: #8a817c !important;
+  box-shadow: 0 2px 8px #bcb8b1 !important;
+}
+body.light-mode .skill-category-pill.active,
+body.light-mode .glass-pill.active {
+  background: linear-gradient(90deg, #8a817c 0%, #e6ccb2 100%) !important;
+  color: #f4f3ee !important;
+  border-color: #e6ccb2 !important;
+  box-shadow: 0 8px 32px #e6ccb2 !important;
+}
+body.light-mode .skill-category-pill:hover,
+body.light-mode .glass-pill:hover {
+  background: linear-gradient(90deg, #e6ccb2 0%, #bcb8b1 100%) !important;
+  color: #8a817c !important;
+}
+body.light-mode .skills-category-pills {
+  background: #f4f3ee !important;
+  box-shadow: 0 2px 16px #bcb8b1 !important;
+}
+body.light-mode .skills-items-list-center span,
+body.light-mode .skills-items-list span {
+  color: #8a817c !important;
+}
+body.light-mode .skills-category-heading {
+  background: #f4f3ee !important;
+  box-shadow: 0 2px 8px #bcb8b1 !important;
+}
+body.light-mode .skills-category-heading.clickable:hover,
+body.light-mode .skills-category-heading.clickable.active {
+  background: linear-gradient(90deg, #8a817c 0%, #e6ccb2 100%) !important;
+  color: #f4f3ee !important;
+  box-shadow: 0 4px 16px #e6ccb2 !important;
+}
+body.light-mode .skills-items-title {
+  background: #f4f3ee !important;
+  box-shadow: 0 2px 8px #bcb8b1 !important;
+}

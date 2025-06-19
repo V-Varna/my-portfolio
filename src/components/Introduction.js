@@ -13,7 +13,7 @@ const links = [
   { icon: <FaGithub />, label: 'GitHub', href: 'https://github.com/V-Varna', group: 1 },
   { icon: <FaLinkedin />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/varna-vanamala/', group: 1 },
   { icon: <FaEnvelope />, label: 'Email', href: 'https://mail.google.com/mail/?view=cm&to=v2005varna@gmail.com&su=Contact%20from%20Portfolio&body=Hi%20Varna,', group: 1 },
-  { icon: <FaFileDownload />, label: 'Resume', href: 'https://drive.google.com/file/d/1iSL72OUc_IZ0P_eZaMa_4d9K6I1zKOeZ/view?usp=drive_link', download: true, group: 2 },
+  { icon: <FaFileDownload />, label: 'Resume', href: 'https://drive.google.com/file/d/1GLz8kFbIMwRwhGuiTcqPUz-3nvNbISY1/view?usp=drive_link', download: true, group: 2 },
   { icon: <FaFolderOpen />, label: 'Projects', href: 'https://github.com/V-Varna?tab=repositories', group: 2 },
 ];
 
